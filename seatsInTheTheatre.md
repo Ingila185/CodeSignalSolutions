@@ -11,7 +11,7 @@ solution(nCols, nRows, col, row) = 96.
 
 Here is what the theater looks like:
 
-https://codesignal.s3.amazonaws.com/uploads/1664318507/example.png?raw=true
+![ALT TEXT](https://codesignal.s3.amazonaws.com/uploads/1664318507/example.png?raw=true)
 
 Input/Output
 
