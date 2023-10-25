@@ -11,4 +11,3 @@ function solution(nums) {
     return Math.max(secondHouse, thirdHouse)
     
     }
-    
