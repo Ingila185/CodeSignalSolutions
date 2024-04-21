@@ -1,0 +1,23 @@
+function solution(dishes) {
+ var mapIngredientToDishes = {};
+    for (var i=0; i<dishes.length; i++) {
+        for (var j=1; j<dishes[i].length; j++) {
+            mapIngredientToDishes[dishes[i][j]] = (mapIngredientToDishes[dishes[i][j]] || []).concat(dishes[i][0]);
+        }
+    }
+   let ingredients = Object.keys(mapIngredientToDishes); 
+   ingredients.sort();
+   ingredients = ingredients.filter(function(ingredient) {
+        const dishes = mapIngredientToDishes[ingredient];
+        const keepIt = dishes.length > 1;
+        return keepIt;
+    });
+  
+    const result = ingredients.map(function(ingredient) {
+        const dishes = mapIngredientToDishes[ingredient];
+        dishes.sort();
+        const arr = [ingredient];
+        return arr.concat(dishes);
+    });
+    return result;
+}
